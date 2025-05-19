@@ -1,7 +1,6 @@
 
 ---
 
-```markdown
 # Weather Subscription Service
 
 ## Description
