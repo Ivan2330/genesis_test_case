@@ -206,12 +206,4 @@ Removes a user from the subscription list.
 
 ---
 
-## Deployment Notes
-
-* Uses Docker for full local isolation
-* WeatherAPI and Mailtrap credentials are required to run properly
-* For production, replace Mailtrap with real SMTP (SendGrid, Gmail App password, etc.)
-
----
-
 
