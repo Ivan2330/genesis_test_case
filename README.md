@@ -126,7 +126,7 @@ You can interact with the API manually using [Postman](https://www.postman.com/)
 
 ---
 
-### 📍 Get Weather for City
+### Get Weather for City
 
 **GET** `http://localhost:3000/api/weather?city=Kyiv`
 
@@ -145,7 +145,7 @@ You can interact with the API manually using [Postman](https://www.postman.com/)
 
 ---
 
-### 📬 Subscribe to Weather Updates
+### Subscribe to Weather Updates
 
 **POST** `http://localhost:3000/api/subscribe`
 
