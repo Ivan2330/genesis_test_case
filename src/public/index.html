@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Subscription</title>
+</head>
+
+<body>
+    <h1>Subscribe to Weather Updates</h1>
+    <form action="/api/subscribe" method="POST">
+        <label>Email:
+            <input type="email" name="email" required />
+        </label><br />
+
+        <label>City:
+            <input type="text" name="city" required />
+        </label><br />
+
+        <label>Frequency:
+            <select name="frequency" required>
+                <option value="hourly">Hourly</option>
+                <option value="daily">Daily</option>
+            </select>
+        </label><br />
+
+        <button type="submit">Subscribe</button>
+    </form>
+</body>
+
+</html>
