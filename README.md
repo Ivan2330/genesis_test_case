@@ -116,6 +116,71 @@ docker-compose run --rm test
 
 Runs all Jest + Supertest-based API tests.
 
+Ось секція, яку ти можеш **додати в `README.md`** після блоку `API Endpoints`, — вона пояснює, як користуватись сервісом через Postman:
+
+---
+
+## Testing API via Postman
+
+You can interact with the API manually using [Postman](https://www.postman.com/). Import the following endpoints and parameters for easy testing:
+
+---
+
+### 📍 Get Weather for City
+
+**GET** `http://localhost:3000/api/weather?city=Kyiv`
+
+* **Query Parameters:**
+
+  * `city` — name of the city you want weather for (e.g. `London`, `Kyiv`, `Berlin`)
+* **Response:**
+
+  ```json
+  {
+    "temperature": 21.4,
+    "humidity": 67,
+    "description": "Partly cloudy"
+  }
+  ```
+
+---
+
+### 📬 Subscribe to Weather Updates
+
+**POST** `http://localhost:3000/api/subscribe`
+
+* **Content-Type:** `application/x-www-form-urlencoded`
+
+* **Body (form-data or x-www-form-urlencoded):**
+
+  * `email`: your email address
+  * `city`: city to subscribe to (e.g. `Kyiv`)
+  * `frequency`: `hourly` or `daily`
+
+* **Example Success Response:**
+
+  ```json
+  {
+    "message": "Subscription successful. Confirmation email sent."
+  }
+  ```
+
+---
+
+### Confirm Subscription
+
+**GET** `http://localhost:3000/api/confirm/:token`
+
+* Replace `:token` with the value received in the confirmation email.
+
+---
+
+### Unsubscribe from Updates
+
+**GET** `http://localhost:3000/api/unsubscribe/:token`
+
+* Also uses the email token to securely unsubscribe.
+
 ---
 
 ## API Endpoints
