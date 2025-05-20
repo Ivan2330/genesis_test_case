@@ -10,7 +10,7 @@ const configFile = require(path.join(__dirname, '../config/sequelize/config.js')
 const config = configFile[env];
 
 if (!config) {
-  throw new Error(`❌ Database config not found for environment: ${env}`);
+  throw new Error(` Database config not found for environment: ${env}`);
 }
 
 const db = {};
